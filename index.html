@@ -6,67 +6,58 @@
   <title>Select Language</title>
   <style>
     body {
-      background-color: #c5e1a5;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #d9eacc;
+      background-image: radial-gradient(circle at 30% 30%, #c7e5b3, #d9eacc);
+      height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      padding: 30px;
-      font-family: Arial, sans-serif;
+      justify-content: center;
+      flex-direction: column;
     }
 
     h1 {
-      color: #2e7d32;
-      margin-bottom: 30px;
+      color: #2f5d32;
+      margin-bottom: 40px;
     }
 
     .button-container {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      margin-bottom: 30px;
+      gap: 20px;
     }
 
-    button {
-      padding: 12px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background-color: #66bb6a;
+    a {
+      text-decoration: none;
+    }
+
+    .lang-button {
+      padding: 15px 30px;
+      background-color: #4f9e52;
       color: white;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #388e3c;
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 90vh;
-      border: 2px solid #2e7d32;
+      font-size: 18px;
+      border: none;
       border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+    }
+
+    .lang-button:hover {
+      background-color: #3f8441;
     }
   </style>
 </head>
 <body>
   <h1>Select language</h1>
   <div class="button-container">
-    <button onclick="showPDF('ingredients_en.pdf')">English</button>
-    <button onclick="showPDF('ingredients_sr.pdf')">Srpski</button>
-    <button onclick="showPDF('ingredients_ua.pdf')">Українська</button>
-    <button onclick="showPDF('ingredients_ru.pdf')">Русский</button>
+    <a href="view_en.html" target="_self"><div class="lang-button">English</div></a>
+    <a href="view_sr.html" target="_self"><div class="lang-button">Srpski</div></a>
+    <a href="view_ua.html" target="_self"><div class="lang-button">Українська</div></a>
+    <a href="view_ru.html" target="_self"><div class="lang-button">Русский</div></a>
   </div>
-
-  <iframe id="pdfViewer" src="" style="display: none;"></iframe>
-
-  <script>
-    function showPDF(filename) {
-      const viewer = document.getElementById('pdfViewer');
-      viewer.src = filename;
-      viewer.style.display = 'block';
-    }
-  </script>
 </body>
 </html>
