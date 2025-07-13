@@ -1,60 +1,61 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Выбор языка | Dynasty Botanique</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f5f5f5;
-        }
-        h1 {
-            margin-bottom: 30px;
-        }
-        button {
-            background-color: #3fa46a;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 18px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #2e8b57;
-        }
-        #pdf-viewer {
-            margin-top: 40px;
-            width: 100%;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        iframe {
-            width: 100%;
-            height: 800px;
-            border: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Language</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background: #e6f5e6; /* нежно-зелёный фон */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #2e7d32;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .lang-button {
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      background-color: #66bb6a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .lang-button:hover {
+      background-color: #4caf50;
+    }
+  </style>
 </head>
 <body>
-    <h1>Выберите язык</h1>
-    <button onclick="showPdf('ingredients_ru.pdf')">Русский</button>
-    <button onclick="showPdf('ingredients_en.pdf')">English</button>
-    <button onclick="showPdf('ingredients_sr.pdf')">Српски</button>
-
-    <div id="pdf-viewer"></div>
-
-    <script>
-        function showPdf(filename) {
-            document.getElementById('pdf-viewer').innerHTML =
-                `<iframe src="${filename}"></iframe>`;
-        }
-    </script>
+  <h1>Select language</h1>
+  <div class="button-container">
+    <a class="lang-button" href="ingredients_en.pdf" target="_blank">English</a>
+    <a class="lang-button" href="ingredients_sr.pdf" target="_blank">Srpski</a>
+    <a class="lang-button" href="ingredients_ua.pdf" target="_blank">Українська</a>
+    <a class="lang-button" href="ingredients_ru.pdf" target="_blank">Русский</a>
+  </div>
 </body>
 </html>
