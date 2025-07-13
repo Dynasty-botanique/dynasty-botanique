@@ -6,58 +6,41 @@
   <title>Select Language</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #d9eacc;
-      background-image: radial-gradient(circle at 30% 30%, #c7e5b3, #d9eacc);
-      height: 100vh;
+      background-color: #a8d5a2;
+      font-family: Arial, sans-serif;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      justify-content: flex-start;
+      height: 100vh;
+      margin: 0;
+      padding-top: 50px;
     }
-
     h1 {
-      color: #2f5d32;
-      margin-bottom: 40px;
+      color: #1f5222;
     }
-
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .lang-button {
-      padding: 15px 30px;
-      background-color: #4f9e52;
-      color: white;
+    .button {
+      margin: 10px;
+      padding: 12px 25px;
       font-size: 18px;
+      background-color: #4caf50;
+      color: white;
       border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      width: 200px;
       text-align: center;
     }
-
-    .lang-button:hover {
-      background-color: #3f8441;
+    .button:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
   <h1>Select language</h1>
-  <div class="button-container">
-    <a href="view_en.html" target="_self"><div class="lang-button">English</div></a>
-    <a href="view_sr.html" target="_self"><div class="lang-button">Srpski</div></a>
-    <a href="view_ua.html" target="_self"><div class="lang-button">Українська</div></a>
-    <a href="view_ru.html" target="_self"><div class="lang-button">Русский</div></a>
-  </div>
+  <a href="view_en.html" class="button">English</a>
+  <a href="view_sr.html" class="button">Srpski</a>
+  <a href="view_ua.html" class="button">Українська</a>
+  <a href="view_ru.html" class="button">Русский</a>
 </body>
 </html>
