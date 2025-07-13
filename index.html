@@ -6,29 +6,28 @@
   <title>Select Language</title>
   <style>
     body {
-      background-color: #c5e1a5; /* светло-зелёный */
+      background-color: #c5e1a5;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
+      padding: 30px;
       font-family: Arial, sans-serif;
     }
 
     h1 {
       color: #2e7d32;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .button-container {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
+      margin-bottom: 30px;
     }
 
     button {
-      padding: 15px 30px;
+      padding: 12px 24px;
       font-size: 16px;
       border: none;
       border-radius: 8px;
@@ -41,20 +40,32 @@
     button:hover {
       background-color: #388e3c;
     }
+
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 90vh;
+      border: 2px solid #2e7d32;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
   <h1>Select language</h1>
   <div class="button-container">
-    <button onclick="openPDF('ingredients_en.pdf')">English</button>
-    <button onclick="openPDF('ingredients_sr.pdf')">Srpski</button>
-    <button onclick="openPDF('ingredients_ua.pdf')">Українська</button>
-    <button onclick="openPDF('ingredients_ru.pdf')">Русский</button>
+    <button onclick="showPDF('ingredients_en.pdf')">English</button>
+    <button onclick="showPDF('ingredients_sr.pdf')">Srpski</button>
+    <button onclick="showPDF('ingredients_ua.pdf')">Українська</button>
+    <button onclick="showPDF('ingredients_ru.pdf')">Русский</button>
   </div>
 
+  <iframe id="pdfViewer" src="" style="display: none;"></iframe>
+
   <script>
-    function openPDF(filename) {
-      window.open(filename, '_blank');
+    function showPDF(filename) {
+      const viewer = document.getElementById('pdfViewer');
+      viewer.src = filename;
+      viewer.style.display = 'block';
     }
   </script>
 </body>
