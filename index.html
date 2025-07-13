@@ -6,56 +6,56 @@
   <title>Select Language</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: "Arial", sans-serif;
-      background: #e6f5e6; /* нежно-зелёный фон */
-      background-size: cover;
-      background-position: center;
+      background-color: #c5e1a5; /* светло-зелёный */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
     h1 {
       color: #2e7d32;
-      font-size: 2.5rem;
       margin-bottom: 40px;
     }
 
     .button-container {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 20px;
     }
 
-    .lang-button {
-      padding: 12px 24px;
-      font-size: 1.2rem;
-      background-color: #66bb6a;
-      color: white;
+    button {
+      padding: 15px 30px;
+      font-size: 16px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      background-color: #66bb6a;
+      color: white;
       transition: background-color 0.3s ease;
-      text-align: center;
-      text-decoration: none;
     }
 
-    .lang-button:hover {
-      background-color: #4caf50;
+    button:hover {
+      background-color: #388e3c;
     }
   </style>
 </head>
 <body>
   <h1>Select language</h1>
   <div class="button-container">
-    <a class="lang-button" href="ingredients_en.pdf" target="_blank">English</a>
-    <a class="lang-button" href="ingredients_sr.pdf" target="_blank">Srpski</a>
-    <a class="lang-button" href="ingredients_ua.pdf" target="_blank">Українська</a>
-    <a class="lang-button" href="ingredients_ru.pdf" target="_blank">Русский</a>
+    <button onclick="openPDF('ingredients_en.pdf')">English</button>
+    <button onclick="openPDF('ingredients_sr.pdf')">Srpski</button>
+    <button onclick="openPDF('ingredients_ua.pdf')">Українська</button>
+    <button onclick="openPDF('ingredients_ru.pdf')">Русский</button>
   </div>
+
+  <script>
+    function openPDF(filename) {
+      window.open(filename, '_blank');
+    }
+  </script>
 </body>
 </html>
