@@ -1,46 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Select Language</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select language</title>
   <style>
     body {
-      background-color: #a8d5a2;
+      margin: 0;
+      padding: 0;
+      background-color: #eaf5e1;
       font-family: Arial, sans-serif;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: flex-start;
       height: 100vh;
-      margin: 0;
-      padding-top: 50px;
+      background-size: cover;
+      background-position: center;
+      flex-direction: column;
     }
     h1 {
-      color: #1f5222;
+      color: #2e7d32;
+      margin-bottom: 20px;
     }
-    .button {
-      margin: 10px;
-      padding: 12px 25px;
-      font-size: 18px;
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .lang-button {
       background-color: #4caf50;
       color: white;
       border: none;
+      padding: 15px 25px;
+      font-size: 18px;
       border-radius: 8px;
       cursor: pointer;
-      width: 200px;
-      text-align: center;
+      transition: background 0.3s;
     }
-    .button:hover {
-      background-color: #45a049;
+    .lang-button:hover {
+      background-color: #388e3c;
     }
   </style>
 </head>
 <body>
   <h1>Select language</h1>
-  <a href="view_en.html" class="button">English</a>
-  <a href="view_sr.html" class="button">Srpski</a>
-  <a href="view_ua.html" class="button">Українська</a>
-  <a href="view_ru.html" class="button">Русский</a>
+  <div class="button-container">
+    <button class="lang-button" onclick="location.href='view_en.html'">English</button>
+    <button class="lang-button" onclick="location.href='view_sr.html'">Srpski</button>
+    <button class="lang-button" onclick="location.href='view_ua.html'">Українська</button>
+    <button class="lang-button" onclick="location.href='view_ru.html'">Русский</button>
+  </div>
 </body>
 </html>
