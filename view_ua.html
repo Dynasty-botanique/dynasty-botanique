@@ -1,14 +1,18 @@
+
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ingredients</title>
+  <title>Інгредієнти</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
       background-color: #5d7f5d;
+      overflow: hidden;
     }
-    iframe {
+    #pdfContainer {
       width: 100vw;
       height: 100vh;
       border: none;
@@ -16,6 +20,15 @@
   </style>
 </head>
 <body>
-  <iframe src="https://docs.google.com/gview?url=https://dynasty-botanique.netlify.app/ingredients_ua.pdf&embedded=true"></iframe>
+  <div id="pdfContainer"></div>
+  <script>
+    const container = document.getElementById("pdfContainer");
+    const iframe = document.createElement("iframe");
+    iframe.src = "https://docs.google.com/gview?url=https://dynasty-botanique.netlify.app/ingredients_ua.pdf&embedded=true";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    container.appendChild(iframe);
+  </script>
 </body>
 </html>
